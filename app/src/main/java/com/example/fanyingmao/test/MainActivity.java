@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initMid(){
         int j = 0;
-        int tem = -1;
+        int tem = 0;
         for (int i = 0; i < listTestBean.size(); i++) {
             if(listTestBean.get(i).isMid()){
                 listTestBean.get(i).setUpNum(j++);
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         j = 0;
-        tem = -1;
+        tem = 0;
         for (int i = listTestBean.size() - 1; i >= 0 ; i--) {
             if(listTestBean.get(i).isMid()){
                 listTestBean.get(i).setDownNum(j++);

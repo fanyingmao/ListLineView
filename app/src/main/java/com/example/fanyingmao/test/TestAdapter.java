@@ -15,6 +15,10 @@ import java.util.HashMap;
  * Created by fanyingmao on 2017/car_3/car_8.
  */
 
+/**
+ * Created by fanyingmao on 2017/car_3/car_8.
+ */
+
 public class TestAdapter extends BaseAdapter{
     ArrayList<TestBean> listTestBean;
     ArrayList<Float> listPoint = new ArrayList<>();
@@ -82,13 +86,13 @@ public class TestAdapter extends BaseAdapter{
                 float x = listPoint.get(listTestBean.get(i).getSelectN());
                 holder.llv_test.setCurrent(x);
             }
-            if(listTestBean.get(i).getUpSelect() > 0){
+            if(i > 0){
                 holder.llv_test.setUp(listPoint.get(listTestBean.get(i).getUpSelect()),listTestBean.get(i).getUpNum());
             }
             else{
                 holder.llv_test.setUp(null);
             }
-            if(listTestBean.get(i).getDownSelect() > 0){
+            if(i < listTestBean.size() - 1){
                 holder.llv_test.setDown(listPoint.get(listTestBean.get(i).getDownSelect()),listTestBean.get(i).getDownNum());
             }
             else{
